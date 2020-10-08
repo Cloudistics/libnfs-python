@@ -42,7 +42,7 @@ class Build(build):
 cmdclass['build'] = Build
 
 
-name = 'dcc-libnfs-python'
+name = 'dcc-libnfs'
 version = '1.0'
 release = '5'
 versrel = version + '.' + release
@@ -53,8 +53,8 @@ with open(readme, "r") as f:
     long_description = f.read()
 
 _libnfs = Extension(
-    name='libnfs._libnfs',
-    sources=['libnfs/libnfs.i'],
+    name='dcc_libnfs._libnfs',
+    sources=['dcc_libnfs/libnfs.i'],
     swig_opts=['-shadow', '-threads'],
     extra_link_args=['-g'],
     extra_compile_args=['-g'],
@@ -73,7 +73,7 @@ setup(
     author_email='ronniesahlberg@gmail.com',
     url='https://github.com/sahlberg/libnfs-python/',
     download_url=download_url,
-    packages=['libnfs'],
+    packages=['dcc_libnfs'],
     classifiers=[
       'Development Status :: 4 - Beta',
       'Intended Audience :: Developers',

@@ -23,7 +23,7 @@
 import errno
 import os
 import sys
-from libnfs.libnfs import *
+from dcc_libnfs.libnfs import *
 
 
 def _stat_to_dict(stat):
